@@ -1,16 +1,26 @@
 # myapp
 
-A new Flutter project.
+My first Flutter app: the standard counter starter (Material 3, deep-purple seed colour), kept for learning the basics
+of widgets and state. Pressing the **+** button increments a counter with `setState`.
 
-## Getting Started
+## Run it
 
-This project is a starting point for a Flutter application.
+Needs the [Flutter SDK](https://docs.flutter.dev/get-started/install) (Dart 3.5 or later).
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter pub get
+flutter run            # pick a device, or:
+flutter run -d chrome  # the web target
+flutter test           # the widget test in test/widget_test.dart
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The project has Android and web targets, and an `.idx/dev.nix` for Project IDX.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Layout
+
+| Path | What it is |
+|------|------------|
+| `lib/main.dart` | The whole app: `MyApp`, `MyHomePage` and the counter state |
+| `test/widget_test.dart` | Taps the button and checks the counter |
+| `android/`, `web/` | Platform folders |
+| `.github/workflows/` | GitHub's stock Dart workflow (it runs `dart` rather than `flutter`, so it doesn't build this app as is) |
